@@ -111,7 +111,10 @@ const getZip = ()=> new Promise(resolve =>{
                     await page.goto('https://myschoolinfo.arkansas.gov/SRC/30/'+lea);
                     let schData = await page.evaluate(async () => {
                         return {
+                            lea: null,
+                            nlea: null,
                             name: document.querySelector('.hdr h2').textContent.trim(),
+                            zip: null,
                             disChar: {
                                 enrollment: document.querySelector('.col-xs-4 span.FY-30').textContent.trim().split(',').join(''),
                                 avgClassSize: document.querySelector('div.row:nth-of-type(2) .col-md-3 span.FY-30').textContent.trim(),
@@ -169,6 +172,8 @@ const getZip = ()=> new Promise(resolve =>{
                     });
                     let ndata = Object.assign(schData, ecoData);
                     ndata.zip = zips[lea1].split(" ").pop()
+                    ndata.lea = lea;
+                    ndata.nlea = nlea;
                     log(chalk.green(`Done with NCES School ID: ${nlea}, District ID: ${lea}`));
                     fs.readFile('./data.json', function(err, data){
                         let da = JSON.parse(data);
