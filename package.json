@@ -1,0 +1,31 @@
+{
+  "name": "ade-scrape",
+  "version": "2.0.0",
+  "description": "Scrape the ADE and NCES for data",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.5",
+    "csv-parser": "^3.0.0",
+    "puppeteer": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoganHeinzelman/ade-scrape.git"
+  },
+  "keywords": [
+    "ADE",
+    "NCES"
+  ],
+  "author": "Logan Heinzelman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoganHeinzelman/ade-scrape/issues"
+  },
+  "homepage": "https://github.com/LoganHeinzelman/ade-scrape#readme"
+}
