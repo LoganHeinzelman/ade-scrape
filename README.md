@@ -3,6 +3,21 @@
 ## Purpose
 This program is designed to scrape the relevant data such as testing scores, school performance, and demographical data from the Arkansas Department of Education and the NCES. This data is used to look at different schools and how each factor might affect testing scores and overall school performance.
 
+
+## Required Modules
+* csv-parser
+* puppeteer
+* fs
+* chalk
+
+## Input Data
+A list of ID's can be obtained from [here](https://adedata.arkansas.gov/nid/Home/District). The current filters are Agency Type is **Regular** and the OP Status is **Open**
+
+## Output Data
+Currently the data is output as a JSON file. It needs to be converted to CSV.
+* The 2019-2020 folder has taken data from the 2018-2019 school year
+* The 2020-2021 files have taken data from the 2019-2020 school year.
+
 ## Data Points
 ### ADE
 -----------------
@@ -75,17 +90,3 @@ This program is designed to scrape the relevant data such as testing scores, sch
         * Employed
         * Unemployed
 
-
-
-
-## Required Modules
-* csv-parser
-* puppeteer
-* fs
-* chalk
-
-## Input Data
-A list of ID's can be obtained from [here](https://adedata.arkansas.gov/nid/Home/District). The current filters are Agency Type is **Regular** and the OP Status is **Open**
-
-## Output Data
-Currently the data is output as a JSON file. It needs to be converted to CSV.
